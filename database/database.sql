@@ -36,15 +36,8 @@ CREATE TABLE `Lessiion` (
   `deleted` int
 );
 
-CREATE TABLE `Student_Courses` (
-  `id_student` int,
-  `id_course` int
-);
+
 
 ALTER TABLE `Users` ADD FOREIGN KEY (`id_role`) REFERENCES `Roles` (`id`);
-
-ALTER TABLE `Users` ADD FOREIGN KEY (`id`) REFERENCES `Student_Courses` (`id_student`);
-
-ALTER TABLE `Coursed` ADD FOREIGN KEY (`id`) REFERENCES `Student_Courses` (`id_course`);
 
 ALTER TABLE `Lessiion` ADD FOREIGN KEY (`id_course`) REFERENCES `Coursed` (`id`);

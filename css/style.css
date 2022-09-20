@@ -24,22 +24,29 @@ body{
 }
 ul.list_menu {
     padding: 0;
-    margin: 0 auto;
+    margin: 0;
     width: 60%;
-    list-style: none;
-
-}
-ul.list_menu Li {
-    float: left;
     border: 1px solid #000;
-    margin: 5px;
-    padding: 5px;
+    list-style: none;
     margin: 0 auto;
-
+    line-height: 27px;
+}
+ul.list_menu li:hover {
+    background: burlywood;
+}
+ul.list_menu li a {
+    text-decoration: none;
+    text-align: center;
+    color: #33ff;
+}
+ul.list_menu li {
+    float: left;
+    margin: 7px;
+    padding: 5px;
 }
 #main{
     border:1px solid rgb(0, 119, 255);
-    height: 400px;
+    height: auto;
     width: 100%;
     background-color: rgb(255, 235, 179);
 }
@@ -51,20 +58,71 @@ ul.list_menu Li {
     margin-left: 5px;
     float: left;
 }
+ul.list_sidebar {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border: 1px solid #000;
+    list-style: none;
+    line-height: 27px;
+}
+ul.list_sidebar li:hover {
+    background: rgb(202, 136, 48);
+
+}
+ul.list_sidebar li a {
+    text-decoration: none;
+    text-align: left;
+    color: #33ff;
+    display: block;
+}
+ul.list_sidebar li {
+    margin: 7px;
+    padding: 5px;
+}
 .maincontent{
     border:1px solid rgb(207, 53, 6);
-    height: 390px;
+    height: auto;
     width: 79%;
     margin-top: 5px;
     margin-left: 5px;
     float: right;
 }
-.clear{
-    clear: both;
+ul.course_list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+}
+ul.course_list li {
+    width: 19%;
+    border: 1px dashed #000;
+    margin: 5px;
+    float: left;
+    background: rgb(241, 206, 90);
+}
+ul.course_list li a {
+    text-decoration: none;
+}
+ul.course_list li img {
+    width: 100%;
+}
+p.title_course {
+    text-align: center;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
 }
 .footer{
     border:1px solid rgb(255, 0, 221);
     height: 150px;
     width: 100%;
     background-color: rgb(236, 193, 49);
+}
+p.footer_copyright {
+    text-align: center;
+    color: #000;
+}
+.clear{
+    clear: both;
 }
