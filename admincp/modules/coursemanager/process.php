@@ -16,9 +16,10 @@
         header('Location:../../index.php?action=coursemanager');
     }elseif(isset($_POST['editcourse'])){
 
-    }elseif(isset($_GET['query'])=='delete'){
+    }else{
         $id = $_GET['id'];
         $sql_delete = "DELETE FROM course WHERE id='".$id."'";
         mysqli_query($mysqli,$sql_delete);
+        header('Location:../../index.php?action=coursemanager');
     }
 ?>

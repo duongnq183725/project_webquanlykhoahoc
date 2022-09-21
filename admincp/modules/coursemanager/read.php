@@ -22,7 +22,7 @@
         <td><?php echo $row['lesson_number'] ?></td>
         <td><?php echo $row['description'] ?></td>
         <td>
-            <a href="?action=coursemanager&query=delete&id=<?php echo $row['id']?>">Xóa</a> | <a href="?action=coursemanager&quey=edit">Sửa</a>
+            <a href="modules/coursemanager/process.php?id=<?php echo $row['id']?>">Xóa</a> | <a href="?action=coursemanager&quey=edit">Sửa</a>
         </td>
     </tr>
     <?php
