@@ -7,12 +7,16 @@
     <link rel="stylesheet" type="text/css" href="css/styleadmincp.css"></link>
 </head>
 <body>
-    <h3>Welcome Admincp</h3>
+    <h3 class="title_admin">Welcome Admincp</h3>
+    <div class="wrapper">
     <?php
+            include("config/config.php");
             include("modules/header.php");
             include("modules/menu.php");
             include("modules/main.php");
             include("modules/footer.php");
     ?>
+    </div>
+
 </body>
 </html>

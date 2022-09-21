@@ -17,20 +17,19 @@ CREATE TABLE `Users` (
   `deleted` int
 );
 
-CREATE TABLE `Coursed` (
+CREATE TABLE `Course` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `name` varchar(255),
   `lession_number` int,
   `description` longtext,
-  `deleted` int
+  `deleted` int,
+  `avatar` varchar(500)
 );
 
-CREATE TABLE `Lessiion` (
+CREATE TABLE `Lesson` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `name` varchar(350),
   `content` longtext,
-  `thumbnail` varchar(500),
-  `video` varchar(500),
   `file` varchar(500),
   `id_course` int,
   `deleted` int
@@ -40,4 +39,4 @@ CREATE TABLE `Lessiion` (
 
 ALTER TABLE `Users` ADD FOREIGN KEY (`id_role`) REFERENCES `Roles` (`id`);
 
-ALTER TABLE `Lessiion` ADD FOREIGN KEY (`id_course`) REFERENCES `Coursed` (`id`);
+ALTER TABLE `Lesson` ADD FOREIGN KEY (`id_course`) REFERENCES `Course` (`id`);

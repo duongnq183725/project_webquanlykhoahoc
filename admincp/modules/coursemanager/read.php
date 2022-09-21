@@ -1,0 +1,31 @@
+<?php
+    $sql_read_course = "SELECT * FROM course ORDER BY id ASC";
+    $query_read_course = mysqli_query($mysqli,$sql_read_course);
+?>
+<p>Danh sách khóa học</p>
+<table border="1" width="100%" style="border-collapse: collapse" style="width:100%">
+    <tr>
+        <th>Id</th>
+        <th>Tên khóa học</th>
+        <th>Số lượng bài học</th>
+        <th>Mô tả</th>
+        <th></th>
+    </tr>
+    <?php
+        $i = 0;
+        while($row = mysqli_fetch_array($query_read_course)){
+            $i++;
+    ?>
+    <tr>
+        <td><?php echo $i ?></td>
+        <td><?php echo $row['name'] ?></td>
+        <td><?php echo $row['lesson_number'] ?></td>
+        <td><?php echo $row['description'] ?></td>
+        <td>
+            <a href="?action=coursemanager&query=delete&id=<?php echo $row['id']?>">Xóa</a> | <a href="?action=coursemanager&quey=edit">Sửa</a>
+        </td>
+    </tr>
+    <?php
+        }
+    ?>
+</table>
