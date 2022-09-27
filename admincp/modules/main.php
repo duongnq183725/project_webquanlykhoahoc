@@ -18,7 +18,7 @@
             include("modules/lessonmanager/create.php");
             include("modules/lessonmanager/read.php");
         }else if($tam == 'lessonmanager' && $query == 'edit'){
-            include("modules/coursemanager/edit.php");
+            include("modules/lessonmanager/edit.php");
         }else {
             include("modules/dashboard.php");
         }

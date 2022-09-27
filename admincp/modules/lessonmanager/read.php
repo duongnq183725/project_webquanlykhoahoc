@@ -23,8 +23,8 @@
         <td><?php echo $row['name'] ?></td>
         <td><?php echo $row['content'] ?></td>
         <td><img src="modules/lessonmanager/uploads/thumbnail/<?php echo $row['thumbnail'] ?>" width="150px"></td>
-        <td><?php echo $row['video'] ?></td>
-        <td><?php echo $row['file'] ?></td>
+        <td><video width="320"controls><source src="modules/lessonmanager/uploads/video/<?php echo $row['video'] ?>" type="video/mp4"></video></td>
+        <td><a href="modules/lessonmanager/uploads/file/<?php echo $row['file'] ?>"><?php echo $row['file'] ?></a></td>
         <td>
             <a href="modules/lessonmanager/process.php?id=<?php echo $row['id']?>">Xóa</a> | <a href="?action=lessonmanager&query=edit&id=<?php echo $row['id']?>">Sửa</a>
         </td>
