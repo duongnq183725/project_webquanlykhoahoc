@@ -10,7 +10,7 @@
         ?>
         <tr>
             <td>Tên khóa học</td>
-            <td><input type="text" value="<?php echo $line['name']?>" name="name"></td>
+            <td><input type="text" value="<?php echo $line['name_course']?>" name_course="name_course"></td>
         </tr>
         <tr>
             <td>Số lượng bài học</td>

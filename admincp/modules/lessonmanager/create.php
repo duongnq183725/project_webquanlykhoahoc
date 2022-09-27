@@ -34,7 +34,7 @@
                         $query_course = mysqli_query($mysqli, $sql_course);
                         while($row_course = mysqli_fetch_array($query_course)){
                     ?>
-                    <option value = "<?php echo $row_course['id']?>"><?php echo $row_course['name']?></option>
+                    <option value = "<?php echo $row_course['id']?>"><?php echo $row_course['name_course']?></option>
                     <?php
                     }?>
                 </select>

@@ -19,7 +19,7 @@
     ?>
     <tr>
         <td><?php echo $i ?></td>
-        <td><?php echo $row['name'] ?></td>
+        <td><?php echo $row['name_course'] ?></td>
         <td><?php echo $row['lesson_number'] ?></td>
         <td><?php echo $row['description'] ?></td>
         <td><img src="modules/coursemanager/uploads/<?php echo $row['avatar'] ?>" width="150px"></td>

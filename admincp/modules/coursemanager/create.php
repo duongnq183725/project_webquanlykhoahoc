@@ -3,7 +3,7 @@
     <form method="POST" action="modules/coursemanager/process.php" enctype="multipart/form-data">
         <tr>
             <td>Tên khóa học</td>
-            <td><input type="text" name="name"></td>
+            <td><input type="text" name="name_course"></td>
         </tr>
         <tr>
             <td>Số lượng bài học</td>

@@ -1,9 +1,9 @@
 <?php
-    $sql_read = "SELECT * FROM lesson ORDER BY id ASC";
-    $query_read = mysqli_query($mysqli,$sql_read);
+    $sql_read_lesson = "SELECT * FROM lesson, course WHERE lesson.id_course=course.id ORDER BY lesson.id ASC";
+    $query_read_lesson = mysqli_query($mysqli,$sql_read_lesson);
 ?>
 <p>Danh sách khóa học</p>
-<table border="1" width="100%" style="border-collapse: collapse" style="width:100%">
+<table border="2" width="100%" style="border-collapse: collapse" style="width:100%">
     <tr>
         <th>STT</th>
         <th>Tên bài học</th>
@@ -11,11 +11,12 @@
         <th>Hình ảnh</th>
         <th>Video</th>
         <th>File</th>
+        <th>Thuộc khóa học</th>
         <th></th>
     </tr>
     <?php
         $i = 0;
-        while($row = mysqli_fetch_array($query_read)){
+        while($row = mysqli_fetch_array($query_read_lesson)){
             $i++;
     ?>
     <tr>
@@ -25,6 +26,7 @@
         <td><img src="modules/lessonmanager/uploads/thumbnail/<?php echo $row['thumbnail'] ?>" width="150px"></td>
         <td><video width="320"controls><source src="modules/lessonmanager/uploads/video/<?php echo $row['video'] ?>" type="video/mp4"></video></td>
         <td><a href="modules/lessonmanager/uploads/file/<?php echo $row['file'] ?>"><?php echo $row['file'] ?></a></td>
+        <td><?php echo $row['name_course'] ?></td>
         <td>
             <a href="modules/lessonmanager/process.php?id=<?php echo $row['id']?>">Xóa</a> | <a href="?action=lessonmanager&query=edit&id=<?php echo $row['id']?>">Sửa</a>
         </td>
