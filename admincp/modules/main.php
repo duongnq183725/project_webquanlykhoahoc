@@ -14,6 +14,11 @@
             include("modules/coursemanager/read.php");
         }else if($tam == 'coursemanager' && $query == 'edit'){
             include("modules/coursemanager/edit.php");
+        }else if($tam == 'lessonmanager' && $query == 'create'){
+            include("modules/lessonmanager/create.php");
+            include("modules/lessonmanager/read.php");
+        }else if($tam == 'lessonmanager' && $query == 'edit'){
+            include("modules/coursemanager/edit.php");
         }else {
             include("modules/dashboard.php");
         }
