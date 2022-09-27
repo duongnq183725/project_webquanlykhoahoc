@@ -5,8 +5,9 @@
     $lesson_number = $_POST['lesson_number'];
     $description = $_POST['description'];
 
-    $avatar = $_FILE['avatar']['name']; 
-    $avatar_tmp = $_FILE['avatar']['tmp_name'];
+    $avatar = $_FILES['avatar']['name']; 
+    $avatar_tmp = $_FILES['avatar']['tmp_name'];
+    $avatar = time().'_'.$avatar;
     
 
     if(isset($_POST['create'])){
@@ -23,6 +24,6 @@
         $id = $_GET['id'];
         $sql_delete = "DELETE FROM course WHERE id='".$id."'";
         mysqli_query($mysqli,$sql_delete);
-        header('Location:../../index.php?action=coursemanager');
+        header('Location:../../index.php?action=coursemanager&query=create');
     }
 ?>

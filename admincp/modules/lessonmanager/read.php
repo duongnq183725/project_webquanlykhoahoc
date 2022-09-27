@@ -1,19 +1,21 @@
 <?php
-    $sql_read_course = "SELECT * FROM course ORDER BY id ASC";
-    $query_read_course = mysqli_query($mysqli,$sql_read_course);
+    $sql_read = "SELECT * FROM lesson ORDER BY id ASC";
+    $query_read = mysqli_query($mysqli,$sql_read);
 ?>
 <p>Danh sách khóa học</p>
 <table border="1" width="100%" style="border-collapse: collapse" style="width:100%">
     <tr>
         <th>STT</th>
-        <th>Tên khóa học</th>
-        <th>Số lượng bài học</th>
-        <th>Mô tả</th>
+        <th>Tên bài học</th>
+        <th>Nội dung</th>
+        <th>Hình ảnh</th>
+        <th>Video</th>
+        <th>File</th>
         <th></th>
     </tr>
     <?php
         $i = 0;
-        while($row = mysqli_fetch_array($query_read_course)){
+        while($row = mysqli_fetch_array($query_read)){
             $i++;
     ?>
     <tr>

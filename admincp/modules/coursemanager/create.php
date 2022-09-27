@@ -1,6 +1,6 @@
 <p>Thêm khóa học</p>
 <table border="1" width="100%" style="border-collapse: collapse";>
-    <form method="POST" action="modules/coursemanager/process.php">
+    <form method="POST" action="modules/coursemanager/process.php" enctype="multipart/form-data">
         <tr>
             <td>Tên khóa học</td>
             <td><input type="text" name="name"></td>
