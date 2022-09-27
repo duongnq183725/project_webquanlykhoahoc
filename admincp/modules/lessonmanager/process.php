@@ -31,6 +31,6 @@
         $id = $_GET['id'];
         $sql_delete = "DELETE FROM course WHERE id='".$id."'";
         mysqli_query($mysqli,$sql_delete);
-        header('Location:../../index.php?action=coursemanager');
+        header('Location:../../index.php?action=lessonmanager&query=create');
     }
 ?>

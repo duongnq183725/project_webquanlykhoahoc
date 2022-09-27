@@ -21,10 +21,12 @@
     <tr>
         <td><?php echo $i ?></td>
         <td><?php echo $row['name'] ?></td>
-        <td><?php echo $row['lesson_number'] ?></td>
-        <td><?php echo $row['description'] ?></td>
+        <td><?php echo $row['content'] ?></td>
+        <td><img src="modules/lessonmanager/uploads/thumbnail/<?php echo $row['thumbnail'] ?>" width="150px"></td>
+        <td><?php echo $row['video'] ?></td>
+        <td><?php echo $row['file'] ?></td>
         <td>
-            <a href="modules/coursemanager/process.php?id=<?php echo $row['id']?>">Xóa</a> | <a href="?action=coursemanager&query=edit&id=<?php echo $row['id']?>">Sửa</a>
+            <a href="modules/lessonmanager/process.php?id=<?php echo $row['id']?>">Xóa</a> | <a href="?action=lessonmanager&query=edit&id=<?php echo $row['id']?>">Sửa</a>
         </td>
     </tr>
     <?php
