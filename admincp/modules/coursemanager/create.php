@@ -3,11 +3,11 @@
     <form method="POST" action="modules/coursemanager/process.php">
         <tr>
             <td>Tên khóa học</td>
-            <td><input type="text" name="namecourse"></td>
+            <td><input type="text" name="name"></td>
         </tr>
         <tr>
             <td>Số lượng bài học</td>
-            <td><input type="int" name="lessionnumber"></td>
+            <td><input type="int" name="lesson_number"></td>
         </tr>
         <tr>
             <td>Mô tả</td>
@@ -18,7 +18,7 @@
             <td><input type="file" name="avatar"></td>
         </tr>
         <tr>
-            <td colspan="2"><input type="submit" name="creatcourse" value="Thêm khóa học"></td>
+            <td colspan="2"><input type="submit" name="create" value="Thêm khóa học"></td>
         </tr>
     </form>
 </table>
