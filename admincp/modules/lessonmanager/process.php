@@ -13,10 +13,11 @@
     $file = $_FILES['file']['name']; 
     $file_tmp = $_FILES['file']['tmp_name'];
     $file = time().'_'.$file;
+    $course = $_POST['course'];
     
 
     if(isset($_POST['create'])){
-        $sql_create = "INSERT INTO lesson(name,content,thumbnail,video,file) VALUE('".$name."','".$content."','".$thumbnail."','".$video."','".$file."')";
+        $sql_create = "INSERT INTO lesson(name,content,thumbnail,video,file,id_course) VALUE('".$name."','".$content."','".$thumbnail."','".$video."','".$file."','".$course."')";
         mysqli_query($mysqli,$sql_create);
         move_uploaded_file($thumbnail_tmp,'uploads/thumbnail/'.$thumbnail);
         move_uploaded_file($video_tmp,'uploads/video/'.$video);

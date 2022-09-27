@@ -26,6 +26,21 @@
             <td><input type="file" name="file"></td>
         </tr>
         <tr>
+            <td>Thuộc khóa học</td>
+            <td>
+                <select name="course">
+                    <?php
+                        $sql_course = "SELECT * FROM course ORDER BY id DESC";
+                        $query_course = mysqli_query($mysqli, $sql_course);
+                        while($row_course = mysqli_fetch_array($query_course)){
+                    ?>
+                    <option value = "<?php echo $row_course['id']?>"><?php echo $row_course['name']?></option>
+                    <?php
+                    }?>
+                </select>
+            </td>
+        </tr>
+        <tr>
             <td colspan="2"><input type="submit" name="create" value="Thêm khóa học"></td>
         </tr>
     </form>
