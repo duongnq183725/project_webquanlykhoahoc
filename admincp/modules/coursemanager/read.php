@@ -5,7 +5,7 @@
 <p>Danh sách khóa học</p>
 <table border="1" width="100%" style="border-collapse: collapse" style="width:100%">
     <tr>
-        <th>Id</th>
+        <th>STT</th>
         <th>Tên khóa học</th>
         <th>Số lượng bài học</th>
         <th>Mô tả</th>
