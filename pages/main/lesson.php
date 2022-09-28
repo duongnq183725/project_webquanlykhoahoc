@@ -14,7 +14,8 @@
 <div class="add_video">
     <video controls><source src="admincp/modules/lessonmanager/uploads/video/<?php echo $row_study['video']?>" type="video/mp4">Trình duyệt của bạn không hỗ trợ thẻ video.</video>
 </div>
-<div class="file">Tài liệu tham khảo: <a href="modules/lessonmanager/uploads/file/<?php echo $row_study['file'] ?>"><?php echo 'Bấm vào để tải'?></a></div>
+<div class="file">Tài liệu tham khảo: <a href="admincp/modules/lessonmanager/uploads/file/<?php echo $row_study['file'] ?>">Bấm vào để tải</a></div>
 <?php
     }
 ?>
+                                      

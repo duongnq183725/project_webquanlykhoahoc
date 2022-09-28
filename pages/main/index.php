@@ -1,5 +1,5 @@
 <?php
-    $sql_listofcourse = "SELECT * FROM lesson, course WHERE lesson.id_course=course.id ORDER BY lesson.id_lesson ASC LIMIT 5";
+    $sql_listofcourse = "SELECT * FROM lesson, course WHERE lesson.id_course=course.id ORDER BY lesson.id_lesson DESC LIMIT 5";
     $query_listofcourse = mysqli_query($mysqli, $sql_listofcourse);
     
 ?>
