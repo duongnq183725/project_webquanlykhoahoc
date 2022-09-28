@@ -24,7 +24,7 @@
         move_uploaded_file($file_tmp,'uploads/file/'.$file);
         header('Location:../../index.php?action=lessonmanager&query=create');
     }elseif(isset($_POST['edit'])){
-        $sql_update = "UPDATE lesson SET name = '".$name."', content = '".$content."', thumbnail = '".$thumbnail."', video = '".$video."', file = '".$file."' WHERE id = '$_GET[id]'";
+        $sql_update = "UPDATE lesson SET name = '".$name."', content = '".$content."', thumbnail = '".$thumbnail."', video = '".$video."', file = '".$file."', id_course = '".$course."' WHERE id_lesson = '$_GET[id_lesson]'";
         mysqli_query($mysqli,$sql_update);
         move_uploaded_file($thumbnail_tmp,'uploads/thumbnail/'.$thumbnail);
         move_uploaded_file($video_tmp,'uploads/video/'.$video);
@@ -32,8 +32,8 @@
         header('Location:../../index.php?action=lessonmanager&query=create');
 
     }else{
-        $id = $_GET['id'];
-        $sql = "SELECT * FROM lesson WHERE id = '$id' LIMIT 1";
+        $id = $_GET['id_lesson'];
+        $sql = "SELECT * FROM lesson WHERE id_lesson = '$id' LIMIT 1";
         $query = mysqli_query($mysqli, $sql);
         // while($row = $mysqli_fetch_array($query)){
         //     unlink('uploads/thumbnail/'.$row['thumbnail']);
@@ -41,7 +41,7 @@
         //     unlink('uploads/file/'.$row['file']);
         // }
         
-        $sql_delete = "DELETE FROM lesson WHERE id='".$id."'";
+        $sql_delete = "DELETE FROM lesson WHERE id_lesson='".$id."'";
         mysqli_query($mysqli,$sql_delete);
         header('Location:../../index.php?action=lessonmanager&query=create');
     }

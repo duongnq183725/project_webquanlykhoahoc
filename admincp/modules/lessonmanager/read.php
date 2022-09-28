@@ -1,5 +1,5 @@
 <?php
-    $sql_read_lesson = "SELECT * FROM lesson, course WHERE lesson.id_course=course.id ORDER BY lesson.id ASC";
+    $sql_read_lesson = "SELECT * FROM lesson, course WHERE lesson.id_course=course.id ORDER BY id_lesson ASC";
     $query_read_lesson = mysqli_query($mysqli,$sql_read_lesson);
 ?>
 <p>Danh sách khóa học</p>
@@ -28,7 +28,7 @@
         <td><a href="modules/lessonmanager/uploads/file/<?php echo $row['file'] ?>"><?php echo $row['file'] ?></a></td>
         <td><?php echo $row['name_course'] ?></td>
         <td>
-            <a href="modules/lessonmanager/process.php?id=<?php echo $row['id']?>">Xóa</a> | <a href="?action=lessonmanager&query=edit&id=<?php echo $row['id']?>">Sửa</a>
+            <a href="modules/lessonmanager/process.php?id_lesson=<?php echo $row['id_lesson']?>">Xóa</a> | <a href="?action=lessonmanager&query=edit&id_lesson=<?php echo $row['id_lesson']?>">Sửa</a>
         </td>
     </tr>
     <?php
