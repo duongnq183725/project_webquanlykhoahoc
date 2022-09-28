@@ -41,7 +41,7 @@
             </td>
         </tr>
         <tr>
-            <td colspan="2"><input type="submit" name="create" value="Thêm khóa học"></td>
+            <td colspan="2"><input type="submit" name="create" value="Thêm bài học"></td>
         </tr>
     </form>
 </table>

@@ -1,3 +1,3 @@
 <div class="header">
-            <p>This is header</p>
+            <p></p>
         </div>
