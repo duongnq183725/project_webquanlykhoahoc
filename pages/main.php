@@ -13,6 +13,8 @@
 
             if($tam == 'listofcourse') {
                 include("main/listofcourse.php");
+            }elseif ($tam == 'lesson') {
+                include("main/lesson.php");
             } elseif ($tam == 'addedcourse') {
                 include("main/addedcourse.php");
             } elseif ($tam == 'intro') {

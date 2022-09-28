@@ -1,7 +1,13 @@
 <div class="sidebar">
             <ul class="list_sidebar">
-                <li><a href="index.php?manager=listofcourse&id=1">Các khóa học về CNTT</a></li>
-                <li><a href="index.php?manager=listofcourse&id=2">Các khóa học về Guitar</a></li>
-                <li><a href="index.php?manager=listofcourse&id=3">Các khóa học về toán cao cấp</a></li>
+                <?php
+                    $sql_course = "SELECT * FROM course ORDER BY id DESC";
+                    $query_course = mysqli_query($mysqli, $sql_course);
+                    while($row = mysqli_fetch_array($query_course)){
+                ?>
+                <li><a href="index.php?manager=listofcourse&id=<?php echo $row['id'] ?>"><?php echo $row['name_course'] ?></a></li>
+                <?php
+                }
+                ?>
             </ul>
             </div>

@@ -3,9 +3,9 @@ body{
     padding: 0;
 }
 .wrapper{
-    border:1px solid#000;
+    /* border:1px solid#000; */
     height: auto;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
 }
 .header{
@@ -51,7 +51,7 @@ ul.list_menu li {
     background-color: rgb(255, 235, 179);
 }
 .sidebar{
-    border:1px solid rgb(0, 14, 31);
+    /* border:1px solid rgb(0, 14, 31); */
     height: 390px;
     width: 20%;
     margin-top: 5px;
@@ -62,7 +62,7 @@ ul.list_sidebar {
     padding: 0;
     margin: 0;
     width: 100%;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     list-style: none;
     line-height: 27px;
 }
@@ -79,39 +79,66 @@ ul.list_sidebar li a {
 ul.list_sidebar li {
     margin: 7px;
     padding: 5px;
+    padding-left: 10px;
 }
 .maincontent{
-    border:1px solid rgb(207, 53, 6);
+    /* border:1px solid rgb(207, 53, 6); */
     height: auto;
     width: 79%;
     margin-top: 5px;
     margin-left: 5px;
     float: right;
 }
-ul.course_list {
+ul.lesson_list {
     padding: 0;
     margin: 0;
     list-style: none;
     width: 100%;
 }
-ul.course_list li {
+ul.lesson_list li {
     width: 19%;
-    border: 1px dashed #000;
+    border: 1px solid #ddd;
     margin: 5px;
     float: left;
-    background: rgb(241, 206, 90);
+    /* background: rgb(241, 206, 90); */
 }
-ul.course_list li a {
+ul.lesson_list li a {
     text-decoration: none;
 }
-ul.course_list li img {
+ul.lesson_list li img {
+    height: 190px;
     width: 100%;
 }
-p.title_course {
+p.title_lesson {
     text-align: center;
     color: #000;
     font-size: 16px;
     font-weight: bold;
+}
+video{
+    width: 1080px;
+    display: block;
+    margin-left: 100px;
+    padding: 50px;
+}
+.title_course{
+    padding: 10px 20px;
+    font-size: 20px;
+    /* font-weight: bold; */
+    border: 2px solid #ff0000;
+}
+.title_in_lesson{
+    padding: 15px 20px 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.content{
+    padding-left: 20px;
+    font-size: 20px;
+}
+.file{
+    padding-left: 20px;
+    font-size: 20px;
 }
 .footer{
     border:1px solid rgb(255, 0, 221);
