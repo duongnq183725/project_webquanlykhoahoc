@@ -1,5 +1,5 @@
 <?php
-    $sql_read_course = "SELECT * FROM course ORDER BY id ASC";
+    $sql_read_course = "SELECT * FROM course ORDER BY id DESC";
     $query_read_course = mysqli_query($mysqli,$sql_read_course);
 ?>
 <p>Danh sách khóa học</p>
